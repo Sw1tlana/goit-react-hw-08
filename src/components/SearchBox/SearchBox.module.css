@@ -1,0 +1,22 @@
+.searchContainer {
+    max-width: 460px;
+    width: 100%;
+    padding: 30px 0;
+}
+
+.labelSearch {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.labelTextSearch {
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.inputSearch {
+    padding: 8px 16px;
+    border-radius: 4px;
+}
