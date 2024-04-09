@@ -3,14 +3,13 @@ import { NavLink } from "react-router-dom"
 const Layout = ({ children }) => {
   return (
       <div>
-          <header>
+         <header>
               <NavLink to="/">Home</NavLink>
               <NavLink to="/register">Register</NavLink>
               <NavLink to="/login">Log In</NavLink>
-              
+              <NavLink to="/contacts">Contacts</NavLink>             
           </header>
-
-          <main>{ children }</main>
+         <main>{ children }</main>
           
     </div>
   )
