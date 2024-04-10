@@ -13,6 +13,7 @@ const Login = lazy(() => import('./pages/Login/Login'));
 const Registration = lazy(() => import('./pages/Registration/Registration'));
 
 function App() {
+  // const dispatch = useD
   return (
     <div className={css.formWrapper}>
       <div>
