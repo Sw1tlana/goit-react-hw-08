@@ -14,7 +14,7 @@ export const clearToken = () => {
 
 export const requestSignUp = async (formData) => {
     const data = await instance.post('/users/signup', formData);
-
+    setToken(data.token);
     return data;
 }
 

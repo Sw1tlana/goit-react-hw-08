@@ -12,7 +12,6 @@ const Contacts = lazy(() => import('./pages/Contacts/Contacts'));
 const Login = lazy(() => import('./pages/Login/Login'));
 const Registration = lazy(() => import('./pages/Registration/Registration'));
 
-
 function App() {
   return (
     <div className={css.formWrapper}>

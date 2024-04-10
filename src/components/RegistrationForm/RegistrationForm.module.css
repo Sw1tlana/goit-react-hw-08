@@ -1,0 +1,67 @@
+.form {
+    border: 0.8px solid var(--text-dark);
+    box-shadow: 6px 3px 2px rgba(0, 0, 0, 0.16), 1px 2px 3px rgba(0, 0, 0, 0.14), 1px 3px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 420px;
+    width: 100%;
+}
+
+.labelForm {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 16px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.labelTextForm {
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.inputContactForm {
+    padding: 8px 15px;
+    border-radius: 4px;
+}
+
+.submitFormBtn {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 8px;
+    border: 0.1px solid var(--text-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+    background-color: var(--light-gray-background);
+    border-radius: 6px;
+    max-width: 100px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform cubic-bezier(0.4, 0, 0.2, 1), transform 0.05s;
+}
+
+.submitFormBtn:focus,
+.submitFormBtn:hover {
+    transform: scale(1.02);
+    background-color: var(--dark-blue-background);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.errorMsg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 15px;
+    display: block;
+    font-size: 14px;
+    border-radius: 8px;
+    color: var(--red-background);
+    background-color: var(--light-red-background);
+}
