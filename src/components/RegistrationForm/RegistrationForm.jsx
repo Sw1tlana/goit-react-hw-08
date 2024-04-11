@@ -80,7 +80,7 @@ const [showPassword, setShowPassword] = useState(false);
         <button className={css.submitFormBtn}
                       type="submit"
                       title='Click to register user'
-                  >Log In</button>
+                  >Sing Up</button>
       </Form>
       </Formik>
     </div>

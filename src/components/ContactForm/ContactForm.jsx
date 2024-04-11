@@ -8,7 +8,7 @@ import { addContact } from '../../redux/contacts/operations';
 
 
 const ContactFormSchema = Yup.object().shape({
-  username: Yup.string()
+  name: Yup.string()
   .min(3, "User name must be at least 3 characters!")
   .max(50, "User name must be less then 50 characters!")
   .required("User name is required"),
@@ -19,7 +19,7 @@ const ContactFormSchema = Yup.object().shape({
 });
 
 const INITIAL_FORM_DATA = {
-  username: "",
+  name: "",
   number: ""
 }
 
@@ -44,7 +44,7 @@ const ContactForm = () => {
           type="text" 
           name="username"
           />
-          <ErrorMessage className={css.errorMsg} name="username" component="span" />
+          <ErrorMessage className={css.errorMsg} name="name" component="span" />
         </label>
 
         <label className={css.labelForm}>
