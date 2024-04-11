@@ -41,3 +41,23 @@ export const requestLogOut = async () => {
 
     return data;
 }
+
+// Contacts
+
+export const requestGetContacts = async () => {
+    const data = await instance.get("/contacts");
+
+    return data;
+}
+
+export const requestAddContacts = async (formData) => {
+    const data = await instance.post("/contacts", formData);
+
+    return data;
+}
+
+export const requestDeleteContacts = async (contactId) => {
+    const data = await instance.delete(`/contacts/${contactId}`);
+
+    return data;
+}

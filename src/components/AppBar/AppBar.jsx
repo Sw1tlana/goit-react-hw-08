@@ -1,27 +1,18 @@
-import Navigation from '../../components/Navigation/Navigation';
-import AuthNav from '../../components/AuthNav/AuthNav';
-import UserMenu from '../../components/UserMenu/UserMenu';
-import { selectIsLoggedIn, selectUser } from "../../redux/auth/selectors";
-import { useSelector } from "react-redux";
+import Navigation from '../Navigation/Navigation';
+import AuthNav from '../AuthNav/AuthNav';
+import UserMenu from '../UserMenu/UserMenu';
+import { useSelector } from 'react-redux';
+import { selectIsLoggedIn } from '../../redux/auth/selectors';
 
 const AppBar = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
-  const user = useSelector(selectUser);
-    
-    const handleLogout = () => {
-    // Додайте код для розлогінення користувача тут
-  };
-    
+
   return (
-      <header>
+    <header>
       <Navigation />
-      {isLoggedIn ? (
-        <UserMenu userName={user.name} onLogout={handleLogout} />
-      ) : (
-        <AuthNav />
-      )}
-        </header>   
-  )
-}
+      {isLoggedIn ? <UserMenu /> : <AuthNav />}
+    </header>
+  );
+};
 
 export default AppBar;

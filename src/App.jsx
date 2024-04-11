@@ -1,13 +1,16 @@
 
 import Loader from './components/Loader/Loader';
-import { useDispatch } from 'react-redux';
 import css from './App.module.css';
 
+import { useDispatch } from 'react-redux';
 import { lazy, useEffect } from 'react';
 import { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Layout from './components/Layout/Layout';
 import { refreshUser } from './redux/auth/operations';
+
+import RestrictedRoute from './components/RestrictedRoute/RestrictedRoute';
+import Layout from './components/Layout/Layout';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
  
 const Home = lazy(() => import('./pages/Home/Home'));
 const Contacts = lazy(() => import('./pages/Contacts/Contacts'));
@@ -22,20 +25,36 @@ function App() {
   }, [dispatch]);
 
   return (
-    <div className={css.formWrapper}>
+       <div className={css.formWrapper}>
       <div>
         <Layout>
-        <Suspense fallback={<Loader />}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/register" element={<Registration />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/contacts" element={<Contacts />} />
-          </Routes>
-        </Suspense>
+          <Suspense fallback={<Loader />}>
+            <Routes>
+              <Route path="/" element={
+                <PrivateRoute>
+                <Home />
+              </PrivateRoute>
+              } />
+              <Route path="/register" element={
+                <RestrictedRoute>
+                  <Registration />
+                </RestrictedRoute>
+              } />
+              <Route path="/login" element={
+                <RestrictedRoute>
+                  <Login />
+                </RestrictedRoute>
+              } />
+              <Route path="/contacts" element={
+                <PrivateRoute>
+                  <Contacts />
+                </PrivateRoute>
+              } />
+            </Routes>
+          </Suspense>
         </Layout>
       </div>
-   </div>
+    </div>
   )
 }
 

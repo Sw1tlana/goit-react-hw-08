@@ -41,15 +41,17 @@ const ContactForm = () => {
         <label className={css.labelForm}>
           <span className={css.labelTextForm}>Name</span>
           <Field className={css.inputContactForm}
+          placeholder="Name"
           type="text" 
-          name="username"
+          name="name"
           />
           <ErrorMessage className={css.errorMsg} name="name" component="span" />
         </label>
 
         <label className={css.labelForm}>
           <span className={css.labelTextForm}>Number</span>
-          <Field className={css.inputContactForm} 
+          <Field className={css.inputContactForm}
+          placeholder="+(380)-000-00-00"  
           type="text" 
           name="number"
          />
