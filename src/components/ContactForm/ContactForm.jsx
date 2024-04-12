@@ -2,7 +2,6 @@ import css from './ContactForm.module.css';
 import { ErrorMessage } from "formik";
 import { Formik, Form, Field } from 'formik';
 import * as Yup from "yup";
-
 import { useDispatch } from 'react-redux';
 import { addContact } from '../../redux/contacts/operations';
 
@@ -43,7 +42,7 @@ const ContactForm = () => {
           <Field className={css.inputContactForm}
           placeholder="Name"
           type="text" 
-          name="name"
+            name="name"
           />
           <ErrorMessage className={css.errorMsg} name="name" component="span" />
         </label>

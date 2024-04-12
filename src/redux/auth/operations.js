@@ -26,18 +26,29 @@ export const login = createAsyncThunk(
 
 
 export const refreshUser = createAsyncThunk( 
-      "auth/refresh",
+    "auth/refresh",
     async (_, thunkAPI) => {
-              const state = thunkAPI.getState();
-               const token = state.auth.token;
-               setToken(token);
-            try {
-                const response = await requestGetCurrentUser();
-                return response.data;
-            }catch(error) {
-                return thunkAPI.rejectWithValue(error.message); 
-            }
-    });
+    const state = thunkAPI.getState();
+    const token = state.auth.token;
+
+    setToken(token);
+    try {
+      const data = await requestGetCurrentUser();
+      return data;
+    } catch (err) {
+      return thunkAPI.rejectWithValue(err.message);
+    }
+  },
+  {
+    condition: (_, thunkAPI) => {
+      const state = thunkAPI.getState();
+      const token = state.auth.token;
+
+      if(!token) return false;
+      return true;
+    }
+  }
+);
 
 
 export const logout = createAsyncThunk(

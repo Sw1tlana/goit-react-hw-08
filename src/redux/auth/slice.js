@@ -1,19 +1,20 @@
 import { createSlice, isAnyOf } from "@reduxjs/toolkit";
 import { login, logout, refreshUser, register } from "./operations";
 
-const INITIALE_STATE = {
-   user: {
-            name: null,
-            email: null,
-        },
-        token: null,
-        isLoggedIn: false,
-        isRefreshing: false,
+const INITIAL_STATE = {
+  user: {
+    name: null,
+    email: null,
+  },
+  token: null,
+  isLoggedIn: false,
+  isRefreshing: false,
+  error: null,
 }
 
 export const authSlice = createSlice({
   name: "auth",
-  initialState: INITIALE_STATE,
+  initialState: INITIAL_STATE,
 
   extraReducers: (builder) => {
     builder
@@ -33,7 +34,7 @@ export const authSlice = createSlice({
       })
       // LOGOUT
       .addCase(logout.fulfilled, () => {
-        return INITIALE_STATE;
+        return INITIAL_STATE;
       })
     // REFRESH
       .addCase(refreshUser.pending, (state) => {
