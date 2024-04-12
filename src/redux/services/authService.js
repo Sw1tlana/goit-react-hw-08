@@ -31,7 +31,7 @@ export const requestSignIn = async (formData) => {
 
 export const requestGetCurrentUser = async () => {
     const { data } = await instance.get('/users/current');
-    setToken(data.token);
+ 
     return data;
 }
 
@@ -62,8 +62,8 @@ export const requestDeleteContacts = async (contactId) => {
     return data;
 }
 
-export const requestUpdateContacts = async (contact) => {
-    const data = await instance.patch(`/contacts/${contact.id}`, contact);
+// export const requestUpdateContact = async (contact) => {
     
-    return data;
-}
+//     const { data } = await instance.patch(`/contacts/${contact.id}`, {name: contact.name,number: contact.number});
+//     return data;
+// }

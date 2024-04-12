@@ -11,8 +11,8 @@ const UserMenu = () => {
   }
 
   return (
-    <div>
-         {user && user.name && (
+     <div>
+      {user && user.name && (
         <p>Welcome, {user.name}!</p>
       )}
       <button type="button" onClick={onLogOut}>

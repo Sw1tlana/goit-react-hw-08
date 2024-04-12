@@ -1,12 +1,12 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { requestGetCurrentUser, requestLogOut, requestSignIn, requestSignUp, setToken } from "../services/authService";
+import { clearToken, requestGetCurrentUser, requestLogOut, requestSignIn, requestSignUp, setToken } from "../services/authService";
 
 export const register = createAsyncThunk(
    "auth/register",
     async (formData, thunkAPI) => {
         try {
             const response = await requestSignUp(formData);
-            return response.data;
+            return response;
         } catch(error) {
             return thunkAPI.rejectWithValue(error.message);
         }
@@ -18,7 +18,7 @@ export const login = createAsyncThunk(
     async (formData, thunkAPI) => {
         try {
             const response = await requestSignIn(formData);
-            return response.data;
+            return response;
         } catch(error) {
             return thunkAPI.rejectWithValue(error.message);
         }
@@ -33,8 +33,8 @@ export const refreshUser = createAsyncThunk(
 
     setToken(token);
     try {
-      const data = await requestGetCurrentUser();
-      return data;
+      const response = await requestGetCurrentUser();
+      return response;
     } catch (err) {
       return thunkAPI.rejectWithValue(err.message);
     }
@@ -56,7 +56,7 @@ export const logout = createAsyncThunk(
     async (_, thunkAPI) => {
         try {
         await requestLogOut();
-            return;
+           clearToken();
         } catch(error) {
         return thunkAPI.rejectWithValue(error.message);
         }
