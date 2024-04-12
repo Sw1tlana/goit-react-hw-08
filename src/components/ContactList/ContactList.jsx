@@ -8,7 +8,7 @@ const ContactList = () => {
   return (
     <div>
       <ul className={css.contactsList}>
-        {Array.isArray(contacts) && contacts.map(contact => (
+        {Array.isArray(contacts) && contacts.length > 0  && contacts.map(contact => (
           <Contact
             key={contact.id}
             id={contact.id}

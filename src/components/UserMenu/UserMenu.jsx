@@ -11,11 +11,9 @@ const UserMenu = () => {
   }
 
   return (
-    <div>
-      {user && user.name && (
+    <div>  
         <span>Welcome, {user.name}!</span>
-      )}
-        <button type="button" onClick={onLogOut}>
+      <button type="button" onClick={onLogOut}>
         Logout
       </button>   
     </div>

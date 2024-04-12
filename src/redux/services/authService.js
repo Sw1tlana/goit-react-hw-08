@@ -16,28 +16,28 @@ export const clearToken = () => {
 
 
 export const requestSignUp = async (formData) => {
-    const data = await instance.post('/users/signup', formData);
+    const { data } = await instance.post('/users/signup', formData);
     setToken(data.token);
     return data;
 }
 
 
 export const requestSignIn = async (formData) => {
-    const data = await instance.post('/users/login', formData);
+    const { data } = await instance.post('/users/login', formData);
     setToken(data.token);
     return data;
 }
 
 
 export const requestGetCurrentUser = async () => {
-    const data = await instance.get('/users/current');
-
+    const { data } = await instance.get('/users/current');
+    setToken(data.token);
     return data;
 }
 
 
 export const requestLogOut = async () => {
-    const data = await instance.post('/users/logout');
+    const { data } = await instance.post('/users/logout');
 
     return data;
 }
