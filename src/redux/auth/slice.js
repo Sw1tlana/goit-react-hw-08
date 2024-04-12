@@ -2,10 +2,9 @@ import { createSlice, isAnyOf } from "@reduxjs/toolkit";
 import { login, logout, refreshUser, register } from "./operations";
 
 const INITIAL_STATE = {
-  user: {
-    name: null,
-    email: null,
-  },
+  user: null,
+  // name: null,
+  // email: null,
   token: null,
   isLoggedIn: false,
   isRefreshing: false,
@@ -34,8 +33,9 @@ export const authSlice = createSlice({
       })
       // LOGOUT
       .addCase(logout.fulfilled, () => {
-        return INITIAL_STATE;
-      })
+          return INITIAL_STATE;
+     })
+    
     // REFRESH
       .addCase(refreshUser.pending, (state) => {
         state.isRefreshing = true;

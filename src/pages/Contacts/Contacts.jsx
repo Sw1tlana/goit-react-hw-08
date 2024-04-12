@@ -14,7 +14,7 @@ import ContactList from '../../components/ContactList/ContactList';
 
 const Contacts = () => {
   const dispatch = useDispatch();
-  const isLoading = useSelector(selectLoading);
+  const loading = useSelector(selectLoading);
   const error = useSelector(selectError);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ const Contacts = () => {
       <h1 className={css.heroFormTitle}>Phonebook</h1>
       <ContactForm />
       <SearchBox />
-      {isLoading && !error && <Loader />}
+      {loading && !error && <Loader />}
       <ContactList />
     </div>
   )
