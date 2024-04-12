@@ -3,7 +3,7 @@ import { logout } from '../../redux/auth/operations';
 import { selectUser } from '../../redux/auth/selectors';
 
 const UserMenu = () => {
-  const user = useSelector(selectUser);
+  const user = useSelector(selectUser).name;
   const dispatch = useDispatch();
 
   const onLogOut = () => {
@@ -11,11 +11,13 @@ const UserMenu = () => {
   }
 
   return (
-    <div>  
-        <span>Welcome, {user.name}!</span>
+    <div>
+         {user && user.name && (
+        <p>Welcome, {user.name}!</p>
+      )}
       <button type="button" onClick={onLogOut}>
         Logout
-      </button>   
+      </button>  
     </div>
   )
 }

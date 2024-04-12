@@ -1,6 +1,6 @@
 import { createSlice, isAnyOf } from "@reduxjs/toolkit";
 import { login, logout, refreshUser, register } from "./operations";
-import toast from 'react-hot-toast';
+import { toast } from 'react-hot-toast';
 
 const INITIAL_STATE = {
   user: {
@@ -41,7 +41,7 @@ export const authSlice = createSlice({
     // REFRESH
       .addCase(refreshUser.pending, (state) => {
         state.isRefreshing = true;
-        state.error = null;
+        state.error = false;
       })
       .addCase(refreshUser.fulfilled, (state, action) => {
         state.isRefreshing = false;
@@ -64,6 +64,7 @@ export const authSlice = createSlice({
         (state) => {
           state.isLoggedIn = false;
           state.error = true;
+          toast.error('Oops! Something went wrong ❌');
         })
   },
 });
