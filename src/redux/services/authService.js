@@ -63,7 +63,7 @@ export const requestDeleteContacts = async (contactId) => {
 }
 
 export const requestUpdateContacts = async (contact) => {
-    const data = await instance.patch(`/contacts/${contact.Id}`, contact);
+    const data = await instance.patch(`/contacts/${contact.id}`, contact);
     
     return data;
 }
