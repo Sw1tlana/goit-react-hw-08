@@ -46,6 +46,7 @@ export const requestLogOut = async () => {
 
 export const requestGetContacts = async () => {
     const data = await instance.get("/contacts");
+    console.log( "requestGetContacts",data)
 
     return data;
 }

@@ -1,23 +1,29 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../../redux/auth/operations';
 import { selectUser } from '../../redux/auth/selectors';
+import { selectIsLoggedIn } from "../../redux/auth/selectors"; 
 
 const UserMenu = () => {
-  const user = useSelector(selectUser).name;
+  const isLoggedIn = useSelector(selectIsLoggedIn);
+  const user = useSelector(selectUser);
   const dispatch = useDispatch();
 
+  const userName = user ? user.name : '';
+
   const onLogOut = () => {
-  dispatch(logout())
+    dispatch(logout());
   }
 
   return (
      <div>
-      {user && user.name && (
-        <p>Welcome, {user.name}!</p>
-      )}
-      <button type="button" onClick={onLogOut}>
-        Logout
-      </button>  
+      {isLoggedIn && user ? (
+        <>
+          <p>Welcome, {userName}!</p>
+          <button type="button" onClick={onLogOut}>
+            Logout
+          </button>
+        </>
+      ) : null}
     </div>
   )
 }

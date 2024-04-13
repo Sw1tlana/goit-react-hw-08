@@ -9,8 +9,18 @@ const Navigation = () => {
 
   return (
     <nav className={css.navbar}>
-      <NavLink to="/">Home</NavLink>
-      {isLoggedIn && <NavLink to="/contacts">Contacts</NavLink>}
+      {/* {!isLoggedIn && (
+        <>
+          <NavLink to="/login">Log In</NavLink>
+          <NavLink to="/register">Register</NavLink>
+        </>
+      )} */}
+      {isLoggedIn && (
+        <>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/contacts">Contacts</NavLink>
+        </>
+      )}
     </nav>
   );
 };
