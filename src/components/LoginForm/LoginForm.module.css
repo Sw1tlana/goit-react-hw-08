@@ -65,3 +65,23 @@
     color: var(--red-background);
     background-color: var(--light-red-background);
 }
+
+.passwordToggleBtn {
+    background-color: var(--light-blue-background);
+    color: var(--text-light);
+    border: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.passwordToggleBtn:hover {
+    background-color: var(--blue-background);
+}

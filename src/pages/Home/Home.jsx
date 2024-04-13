@@ -6,7 +6,8 @@ const Home = () => {
     <div className={css.containerHome}>
       <Helmet>
         <title>Home</title>
-    </Helmet>
+      </Helmet>
+      <h1 className={css.heroTitle}>Task manager welcome page</h1><span className={css.moji}>🤷‍♀️</span>
       </div>
   )
 }

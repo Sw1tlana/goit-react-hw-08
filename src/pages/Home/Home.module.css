@@ -1,0 +1,20 @@
+.containerHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.heroTitle {
+    background: linear-gradient(45deg, #aad7e8, #6e7172);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-size: 68px;
+    text-align: centerж
+}
+
+.moji {
+    font-weight: 700;
+    font-size: 68px;  
+}

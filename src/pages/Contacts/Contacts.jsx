@@ -21,13 +21,14 @@ const Contacts = () => {
     dispatch(fetchContacts());
   }, [dispatch])
   
-
   return (
-    <div className={css.containerContacts}>
+    <div>
       <Helmet>
         <title>Contacts</title>
       </Helmet>
-      <h1 className={css.heroFormTitle}>Phonebook</h1>
+      <div className={css.containerContacts}>
+         <h2 className={css.phoneTitle}>Phonebook</h2>
+      </div>
       <ContactForm />
       <SearchBox />
       {loading && !error && <Loader />}

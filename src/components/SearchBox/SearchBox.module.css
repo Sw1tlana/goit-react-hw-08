@@ -1,13 +1,16 @@
 .searchContainer {
-    max-width: 460px;
-    width: 100%;
     padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .labelSearch {
     display: flex;
     flex-direction: column;
     gap: 6px;
+    max-width: 440px;
+    width: 100%;
 }
 
 .labelTextSearch {

@@ -1,3 +1,9 @@
+.containerForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .form {
     border: 0.8px solid var(--text-dark);
     box-shadow: 6px 3px 2px rgba(0, 0, 0, 0.16), 1px 2px 3px rgba(0, 0, 0, 0.14), 1px 3px 1px rgba(0, 0, 0, 0.3);

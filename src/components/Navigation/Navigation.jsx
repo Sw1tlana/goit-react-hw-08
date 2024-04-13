@@ -9,12 +9,6 @@ const Navigation = () => {
 
   return (
     <nav className={css.navbar}>
-      {/* {!isLoggedIn && (
-        <>
-          <NavLink to="/login">Log In</NavLink>
-          <NavLink to="/register">Register</NavLink>
-        </>
-      )} */}
       {isLoggedIn && (
         <>
           <NavLink to="/">Home</NavLink>

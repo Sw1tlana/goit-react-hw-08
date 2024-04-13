@@ -58,7 +58,7 @@ const [showPassword, setShowPassword] = useState(false);
                 onClick={togglePasswordVisibility}
                 className={css.passwordToggleBtn}
              >
-                {showPassword ? "Hide" : "Show"} Password
+                {showPassword ? "✔" : "X"}
               </button>
           <ErrorMessage className={css.errorMsg} name="password" component="span" />
         </label>

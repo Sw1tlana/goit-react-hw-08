@@ -35,7 +35,7 @@ const [showPassword, setShowPassword] = useState(false);
     formActions.resetForm();
   }
   return (
-      <div>
+      <div className={css.containerRegister}>
         <Formik 
         validationSchema={UserRegisterSchema}
         initialValues={INITIAL_FORM_DATA} 
@@ -64,15 +64,15 @@ const [showPassword, setShowPassword] = useState(false);
         <label className={css.labelForm}>
           <span className={css.labelTextForm}>Password</span>
             <Field className={css.inputContactForm} 
-          placeholder="Enter your password"                
-          type={showPassword ? "text" : "password"}  
-          name="password" />
+            placeholder="Enter your password"                
+            type={showPassword ? "text" : "password"}  
+            name="password" />
             <button 
                 type="button" 
                 onClick={togglePasswordVisibility}
                 className={css.passwordToggleBtn}
              >
-                {showPassword ? "Hide" : "Show"} Password
+                {showPassword ? "✔" : "X"} 
               </button>
           <ErrorMessage className={css.errorMsg} name="password" component="span" />
         </label>

@@ -1,0 +1,15 @@
+.containerContacts {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.phoneTitle {
+    align-items: center;
+    background: linear-gradient(45deg, #aad7e8, #6e7172);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 36px;
+}

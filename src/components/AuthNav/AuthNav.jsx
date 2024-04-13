@@ -13,7 +13,7 @@ const AuthNav = () => {
           <NavLink to="/login">Log In</NavLink>
         </>
       )}
-    </div>
+    </div>    
   );
 };
 

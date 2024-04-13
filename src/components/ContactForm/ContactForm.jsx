@@ -31,6 +31,7 @@ const ContactForm = () => {
   }
 
   return (
+    <div className={css.containerForm}>
       <Formik 
         validationSchema={ContactFormSchema}
         initialValues={INITIAL_FORM_DATA} 
@@ -50,7 +51,7 @@ const ContactForm = () => {
         <label className={css.labelForm}>
           <span className={css.labelTextForm}>Number</span>
           <Field className={css.inputContactForm}
-          placeholder="+(380)-000-00-00"  
+          placeholder="+(380) 000 00 00"  
           type="text" 
           name="number"
          />
@@ -60,6 +61,7 @@ const ContactForm = () => {
         <button className={css.submitFormBtn} type="submit">Add contact</button>
       </Form>
       </Formik>
+    </div>
   )
 }
 
