@@ -31,7 +31,7 @@ export const requestSignIn = async (formData) => {
 
 export const requestGetCurrentUser = async () => {
     const { data } = await instance.get('/users/current');
- 
+
     return data;
 }
 
@@ -45,26 +45,20 @@ export const requestLogOut = async () => {
 // Contacts
 
 export const requestGetContacts = async () => {
-    const data = await instance.get("/contacts");
-    console.log( "requestGetContacts",data)
+    const { data } = await instance.get("/contacts");
 
     return data;
 }
 
 export const requestAddContacts = async (formData) => {
-    const data = await instance.post("/contacts", formData);
+    const { data } = await instance.post("/contacts", formData);
 
     return data;
 }
 
 export const requestDeleteContacts = async (contactId) => {
-    const data = await instance.delete(`/contacts/${contactId}`);
+    const { data } = await instance.delete(`/contacts/${contactId}`);
 
     return data;
 }
 
-// export const requestUpdateContact = async (contact) => {
-    
-//     const { data } = await instance.patch(`/contacts/${contact.id}`, {name: contact.name,number: contact.number});
-//     return data;
-// }

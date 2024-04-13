@@ -56,13 +56,11 @@ export const authSlice = createSlice({
       .addMatcher(isAnyOf(
         register.pending, login.pending, logout.pending),
         (state) => {
-          // state.isLoggedIn = true;
           state.error = false;
         })
       .addMatcher(isAnyOf(
         register.rejected, login.rejected, logout.rejected),
         (state) => {
-          // state.isLoggedIn = false;
           state.error = true;
           toast.error('Oops! Something went wrong ❌');
         })

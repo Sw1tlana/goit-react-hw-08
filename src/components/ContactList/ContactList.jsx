@@ -2,15 +2,10 @@ import css from './ContactList.module.css';
 import Contact from '../Contact/Contact';
 import { useSelector } from 'react-redux';
 import { selectFilteredContacts } from '../../redux/filters/selectors';
-import { useEffect } from 'react';
 
 const ContactList = () => {
-  // const contacts = useSelector(selectFilteredContacts);
-    const contacts = useSelector(selectFilteredContacts);
-
-  useEffect(() => {
-    console.log(contacts); // логування даних
-  }, [contacts]);
+  const contacts = useSelector(selectFilteredContacts);
+ 
   return (
     <div>
       <ul className={css.contactsList}>
