@@ -1,6 +1,14 @@
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectIsLoggedIn } from "../../redux/auth/selectors";
+import css from './AuthNav.module.css';
+import clsx from 'clsx';
+
+const getNavLinkClass = ({ isActive }) => {
+  return clsx(css.headerLink, {
+    [css.active]: isActive,
+  })
+}
 
 const AuthNav = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
@@ -8,10 +16,10 @@ const AuthNav = () => {
   return (
     <div>
       {!isLoggedIn && (
-        <>
-          <NavLink to="/register">Register</NavLink>
-          <NavLink to="/login">Log In</NavLink>
-        </>
+        <div className={css.containerNav}>
+          <NavLink to="/register" className={getNavLinkClass}>Register</NavLink>
+          <NavLink to="/login" className={getNavLinkClass}>Log In</NavLink>
+        </div>
       )}
     </div>    
   );

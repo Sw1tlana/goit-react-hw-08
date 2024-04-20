@@ -1,19 +1,37 @@
 .header {
+    padding: 10px 20px;
+    background-color: var(--black-background);
+}
+
+.burgerMenu {
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;   
+    font-size: 24px;
+    color: var(--burger-menu);
+    margin-right: 20px;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+@media screen and (min-width: 768px) {
+    .burgerMenu {
+        display: none;
+    }
+
+    .menu {
+        position: relative;
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 20px;
-        background-color: var(--black-background);
-        color: var(--text-light);
-    }
-
-    .header a {
-        color: var(--text-light);
-        text-decoration: none;
-        margin-left: 20px;
-        font-size: 18px;
-    }
-
-    .header a:hover {
-        text-decoration: underline;
-    }
+        gap: 20px;
+        background-color: transparent;
+    } 
+}

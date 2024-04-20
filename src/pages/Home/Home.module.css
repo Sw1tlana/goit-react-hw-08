@@ -10,11 +10,31 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
-    font-size: 68px;
-    text-align: centerж
+    font-size: 28px;
+    text-align: center;
 }
 
 .moji {
     font-weight: 700;
-    font-size: 68px;  
+    font-size: 38px;  
+}
+
+@media screen and (min-width: 768px) {
+.heroTitle {
+    font-size: 48px;
+}
+.moji {
+    font-size: 48px;
+}
+
+}
+
+@media screen and (min-width: 1158px) {
+.heroTitle {
+    font-size: 68px;
+}
+.moji {
+    font-size: 68px;
+}
+
 }

@@ -1,9 +1,10 @@
 :root {
     --dark-blue-background: #87bfd9;
     --light-gray-background: #c9c2c2;
-    --dark-gray-background: #7d7878;
+    --text-light: #7d7878;
     --black-background: #8d8b8b;
     --text-dark: #1B1B1B;
+    --burger-menu: #333333;
     --red-background: #cf1411;
     --light-red-background: #f4cfcf;
     --text-light: #ffffff;
@@ -13,8 +14,13 @@
 }
 
 body {
-    font-family: sans-serif;
-    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-slate);
+    font-size: 16px;
+    background-color: var(--color-light);
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0.02em;
 }
 
 h1,
@@ -39,3 +45,24 @@ img {
     max-width: 100%;
 }
 
+ .container {
+    width: 320px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-right: auto;
+    margin-left: auto;
+} 
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 768px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .container {
+        width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+} 
