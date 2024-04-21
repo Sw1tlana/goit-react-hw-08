@@ -2,7 +2,7 @@ import Navigation from '../Navigation/Navigation';
 import AuthNav from '../AuthNav/AuthNav';
 import UserMenu from '../UserMenu/UserMenu';
 import css from './AppBar.module.css';
-import clsx from 'clsx';
+import '../../index.css';
 
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
@@ -17,11 +17,9 @@ const AppBar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
   
-  const headerClasses = clsx(css.header, css.container);
-  
   return (
-    <>
-    <header className={headerClasses}>
+    <div className={css.container}>
+    <header className={css.header}>
       <div className={css.menu}>
         <Navigation />
         {isLoggedIn ? <UserMenu /> : <AuthNav />}
@@ -29,14 +27,14 @@ const AppBar = () => {
       <button className={css.burgerMenu} onClick={toggleMenu}>
         ☰
       </button>
-   </header>
       {isMenuOpen && (
         <div className={css.mobileMenu}>
           <Navigation />
           {isLoggedIn ? <UserMenu /> : <AuthNav />}
         </div>
       )}
-      </>
+         </header>
+    </div>
   );
 };
 

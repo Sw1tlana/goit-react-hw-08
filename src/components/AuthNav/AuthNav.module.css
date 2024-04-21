@@ -5,11 +5,10 @@
 }
 
 .headerLink {
-    padding: 10px 0;
     color: var(--text-light);
     text-decoration: none;
     margin-left: 20px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     transition: color 0.3s, text-shadow 0.3s
 }
@@ -23,7 +22,17 @@
 .containerNav {
         display: flex;
         flex-direction: row;
+        align-items: center;
         gap: 10px;
+    }
+        .headerLink {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .headerLink {
+        font-size: 28px;
     }
 }
 

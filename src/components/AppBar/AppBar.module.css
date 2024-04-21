@@ -1,37 +1,52 @@
 .header {
-    padding: 10px 20px;
+    height: 100px;
     background-color: var(--black-background);
 }
 
 .burgerMenu {
     display: block;
     background-color: transparent;
+    position: relative;
+    padding: 20px 0;
     border: none;
     cursor: pointer;   
     font-size: 24px;
     color: var(--burger-menu);
-    margin-right: 20px;
 }
 
 .menu {
     display: none;
-    flex-direction: column;
-    gap: 10px;
-    z-index: 1000;
+}
+
+.mobileMenu {
+    width: 300px;
+    height: 400px;
+    border-radius: 6px;
+    padding: 20px;
+    position: absolute;
+    top: 20%;
+    left: 2%;
+    z-index: 7;
+    background-color: var(--black-background);
 }
 
 @media screen and (min-width: 768px) {
     .burgerMenu {
-        display: none;
-    }
-
+    display: none;
+}
     .menu {
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        gap: 20px;
-        background-color: transparent;
-    } 
+    position: relative;
+    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+    background-color: transparent;
+} 
+
+    .mobileMenu {
+    display: none;
+    
+}
 }

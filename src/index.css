@@ -1,7 +1,7 @@
 :root {
     --dark-blue-background: #87bfd9;
     --light-gray-background: #c9c2c2;
-    --text-light: #7d7878;
+    --text-grey-light: #7d7878;
     --black-background: #8d8b8b;
     --text-dark: #1B1B1B;
     --burger-menu: #333333;
@@ -11,6 +11,11 @@
     --blue-background: #0056b3;
     --light-blue-background: #588bc1;
 
+}
+*,
+::before,
+::after {
+    box-sizing: border-box;
 }
 
 body {
@@ -45,13 +50,11 @@ img {
     max-width: 100%;
 }
 
- .container {
+.container {
     width: 320px;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-right: auto;
-    margin-left: auto;
-} 
+    padding: 0 16px;
+    margin: 0 auto;
+}
 
 @media screen and (min-width: 768px) {
     .container {
@@ -62,7 +65,6 @@ img {
 @media screen and (min-width: 1158px) {
     .container {
         width: 1158px;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding: 0 15px;
     }
-} 
+}

@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { selectIsLoggedIn } from "../../redux/auth/selectors";
 import css from './AuthNav.module.css';
 import clsx from 'clsx';
+import '../../index.css';
 
 const getNavLinkClass = ({ isActive }) => {
   return clsx(css.headerLink, {
@@ -14,7 +15,7 @@ const AuthNav = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
   return (
-    <div>
+    <div className={css.container}>
       {!isLoggedIn && (
         <div className={css.containerNav}>
           <NavLink to="/register" className={getNavLinkClass}>Register</NavLink>

@@ -16,14 +16,14 @@ const UserMenu = () => {
   }
 
   return (
-     <div className={css.containerMenu}>
+     <div>
       {isLoggedIn && user ? (
-        <>
+        <div className={css.containerMenu}>
           <p className={css.textMenu}>Welcome, {userName}!</p>
           <button className={css.buttonUser} type="button" onClick={onLogOut}>
             Logout
           </button>
-        </>
+        </div>
       ) : null}
     </div>
   )
