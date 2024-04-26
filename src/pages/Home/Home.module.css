@@ -2,15 +2,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(rgba(133, 134, 147, 0.7), rgba(165, 169, 187, 0.7)),
+    url('https://perfectum.ua/media/zoo/images/fon2_a86f98456b01d312ad903f7c123f921c.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     min-height: 100vh;
 }
 
 .heroTitle {
-    background: linear-gradient(45deg, #aad7e8, #6e7172);
+    background: linear-gradient(45deg, #f5fc1e, #fcf8f8);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-weight: 700;
-    font-size: 28px;
+    font-weight: 800;
+    font-size: 38px;
     text-align: center;
 }
 

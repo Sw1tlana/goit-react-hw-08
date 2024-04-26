@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
   return (
-    <div className={`${css.containerHome} ${css.container}`}>
+    <div className={css.containerHome}>
       <Helmet>
         <title>Home</title>
       </Helmet>

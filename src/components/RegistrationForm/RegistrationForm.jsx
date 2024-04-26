@@ -1,8 +1,10 @@
+import '../../index.css';
 import css from './RegistrationForm.module.css';
 import { ErrorMessage } from "formik";
 import { Formik, Form, Field } from 'formik';
 import { useState } from 'react';
 import * as Yup from "yup";
+
 
 const UserRegisterSchema = Yup.object().shape({
     name: Yup.string()
@@ -24,18 +26,20 @@ const INITIAL_FORM_DATA = {
 }
 
 export const RegistrationForm = ({ onRegister }) => {
-const [showPassword, setShowPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
   const handleSubmit = (formData, formActions) => {
-     onRegister(formData);
+    onRegister(formData);
     formActions.resetForm();
   }
+
   return (
-      <div className={css.containerRegister}>
+    <div className={css.container}>
+       <div className={css.containerRegister}>
         <Formik 
         validationSchema={UserRegisterSchema}
         initialValues={INITIAL_FORM_DATA} 
@@ -46,7 +50,7 @@ const [showPassword, setShowPassword] = useState(false);
           <span className={css.labelTextForm}>Name</span>
           <Field className={css.inputContactForm}
           type="text" 
-          name="name"
+          name="name"containerRegister
           />
           <ErrorMessage className={css.errorMsg} name="name" component="span" />
         </label>
@@ -82,8 +86,10 @@ const [showPassword, setShowPassword] = useState(false);
                       title='Click to register user'
                   >Sing Up</button>
       </Form>
-      </Formik>
-    </div>
+        </Formik>
+        </div>
+      </div>
+ 
   )
 }
 

@@ -18,8 +18,8 @@ const AppBar = () => {
   };
   
   return (
-    <div className={css.container}>
-    <header className={css.header}>
+    <>
+      <header className={css.header}>
       <div className={css.menu}>
         <Navigation />
         {isLoggedIn ? <UserMenu /> : <AuthNav />}
@@ -34,7 +34,7 @@ const AppBar = () => {
         </div>
       )}
          </header>
-    </div>
+    </>
   );
 };
 

@@ -1,8 +1,9 @@
-import css from './LoginForm.module.css';
 import { ErrorMessage } from "formik";
 import { Formik, Form, Field } from 'formik';
 import { useState } from 'react';
 import * as Yup from "yup";
+import '../../index.css';
+import css from './LoginForm.module.css';
 
 const UserRegisterSchema = Yup.object().shape({
     email: Yup.string()
@@ -30,7 +31,10 @@ const [showPassword, setShowPassword] = useState(false);
     formActions.resetForm();
   }
   return (
-      <div>
+    <div className={`${css.container} ${css.containerForm}`}>
+      <img className={css.imgLoginForm}
+        src="https://www.2n.com/ru_RU/documents/22902/10363696/My2N-man_plat_user-without-login_800x533.webp/f8ff8863-8e63-4fa9-8c4b-a5a34e33a54a"
+        alt="documents"/>
         <Formik 
         validationSchema={UserRegisterSchema}
         initialValues={INITIAL_FORM_DATA} 
