@@ -5,7 +5,6 @@ import { Formik, Form, Field } from 'formik';
 import { useState } from 'react';
 import * as Yup from "yup";
 
-
 const UserRegisterSchema = Yup.object().shape({
     name: Yup.string()
     .required("User name is required")
@@ -38,14 +37,16 @@ export const RegistrationForm = ({ onRegister }) => {
   }
 
   return (
-    <div className={css.container}>
-       <div className={css.containerRegister}>
+      <div className={`${css.container} ${css.containerRegister}`}>
+          <img className={css.imgRegisterForm}
+        src="https://cdn.nur.kz/images/1120x630/ee3d970dfb54ef99.jpeg"
+        alt="images"/>
         <Formik 
         validationSchema={UserRegisterSchema}
         initialValues={INITIAL_FORM_DATA} 
         onSubmit={handleSubmit}>
 
-      <Form className={css.form}>
+      <Form className={css.formRegister}>
         <label className={css.labelForm}>
           <span className={css.labelTextForm}>Name</span>
           <Field className={css.inputContactForm}
@@ -88,8 +89,6 @@ export const RegistrationForm = ({ onRegister }) => {
       </Form>
         </Formik>
         </div>
-      </div>
- 
   )
 }
 

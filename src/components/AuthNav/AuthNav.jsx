@@ -11,15 +11,15 @@ const getNavLinkClass = ({ isActive }) => {
   })
 }
 
-const AuthNav = () => {
+const AuthNav = ({onCloseMenu}) => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
   return (
     <div className={css.container}>
       {!isLoggedIn && (
         <div className={css.containerNav}>
-          <NavLink to="/register" className={getNavLinkClass}>Register</NavLink>
-          <NavLink to="/login" className={getNavLinkClass}>Log In</NavLink>
+          <NavLink to="/register" onClick={onCloseMenu} className={getNavLinkClass}>Register</NavLink>
+          <NavLink to="/login" onClick={onCloseMenu} className={getNavLinkClass}>Log In</NavLink>
         </div>
       )}
     </div>    

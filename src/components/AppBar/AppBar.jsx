@@ -8,7 +8,6 @@ import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import { useState } from 'react';
 
-
 const AppBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isLoggedIn = useSelector(selectIsLoggedIn);
@@ -16,26 +15,30 @@ const AppBar = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  
+
+   const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+ 
   return (
     <>
       <header className={css.header}>
       <div className={css.menu}>
-        <Navigation />
-        {isLoggedIn ? <UserMenu /> : <AuthNav />}
+        <Navigation onCloseMenu={closeMenu} />
+        {isLoggedIn ? <UserMenu onCloseMenu={closeMenu} /> : <AuthNav onCloseMenu={closeMenu} />}
       </div>
       <button className={css.burgerMenu} onClick={toggleMenu}>
         ☰
       </button>
       {isMenuOpen && (
         <div className={css.mobileMenu}>
-          <Navigation />
-          {isLoggedIn ? <UserMenu /> : <AuthNav />}
+          <Navigation onCloseMenu={closeMenu} />
+          {isLoggedIn ? <UserMenu onCloseMenu={closeMenu} /> : <AuthNav onCloseMenu={closeMenu} />}
         </div>
       )}
-         </header>
+    </header>
     </>
   );
 };
 
-export default AppBar
+export default AppBar;

@@ -1,23 +1,22 @@
 .containerRegister {
-    background-image: linear-gradient(rgba(133, 134, 147, 0.7), rgba(165, 169, 187, 0.7)), url('https://perfectum.ua/media/zoo/images/fon2_a86f98456b01d312ad903f7c123f921c.webp');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    /* display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; */
-    gap: 20px;
-    padding: 16px 0;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 40px 16px;
 }
 
-.form {
+.imgRegisterForm {
+    width: 400px;
+}
+
+.formRegister {
     border: 0.8px solid var(--text-dark);
     box-shadow: 6px 3px 2px rgba(0, 0, 0, 0.16), 1px 2px 3px rgba(0, 0, 0, 0.14), 1px 3px 1px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
-    padding: 30px;
-    margin: 0 auto;
-    max-width: 420px;
+    padding: 20px;
+    max-width: 300px;
     width: 100%;
 }
 
@@ -102,14 +101,23 @@
 }
 
 @media screen and (min-width: 768px) {
-    .container {
-        width: 768px;
+
+    .containerRegister {
+        flex-wrap: nowrap;
+        gap: 30px;
+    }
+
+    .formRegister {
+        max-width: 400px;
+    }
+
+    .imgRegisterForm {
+        width: 500px;
     }
 }
 
 @media screen and (min-width: 1158px) {
-    .container {
-        width: 1158px;
-        padding: 0 15px;
+    .imgRegisterForm {
+        width: 700px;
     }
 }

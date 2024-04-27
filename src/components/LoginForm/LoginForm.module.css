@@ -8,12 +8,12 @@
 
 }
 
-.form {  
+.formLogin {  
     border: 0.8px solid var(--text-dark);
     box-shadow: 6px 3px 2px rgba(0, 0, 0, 0.16), 1px 2px 3px rgba(0, 0, 0, 0.14), 1px 3px 1px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     padding: 20px;
-    width: 300px;   
+    width: 300px;  
 }
 
 .imgLoginForm {
@@ -101,22 +101,22 @@
 }
 
 @media screen and (min-width: 768px) {
+    .containerForm {
+         flex-wrap: nowrap;
+         gap: 30px;
+    }
 
-.form {
+.formLogin {
         padding: 30px;
         width: 400px;
      }
 
 .imgLoginForm {
-        width: 700px;
+        width: 600px;
     }
     
 }
 
 @media screen and (min-width: 1158px) {
-    
-.containerForm {
-        justify-content: space-between;
-        gap: 20px;
-    }
+
 }

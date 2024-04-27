@@ -2,33 +2,43 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 16px;
+    min-height: 100vh;
     background-image: linear-gradient(rgba(133, 134, 147, 0.7), rgba(165, 169, 187, 0.7)),
     url('https://perfectum.ua/media/zoo/images/fon2_a86f98456b01d312ad903f7c123f921c.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    min-height: 100vh;
 }
 
 .heroTitle {
-    background: linear-gradient(45deg, #f5fc1e, #fcf8f8);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
     font-weight: 800;
     font-size: 38px;
     text-align: center;
+    background: linear-gradient(45deg,
+        #f5fc1e,
+        #f44b4b,
+        #f5fc1e,
+        #8eddf7,
+        #f5fc1e,
+        #fcf8f8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 10s ease infinite alternate;
 }
 
 .moji {
-    font-weight: 700;
-    font-size: 38px;  
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
 .heroTitle {
-    font-size: 48px;
+    font-size: 68px;
 }
 .moji {
+    display: block;
+    font-weight: 700;
     font-size: 48px;
 }
 
@@ -36,10 +46,10 @@
 
 @media screen and (min-width: 1158px) {
 .heroTitle {
-    font-size: 68px;
+    font-size: 88px;
 }
 .moji {
-    font-size: 68px;
+    font-size: 88px;
 }
 
 }

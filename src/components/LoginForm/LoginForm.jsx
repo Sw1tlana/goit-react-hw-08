@@ -40,7 +40,7 @@ const [showPassword, setShowPassword] = useState(false);
         initialValues={INITIAL_FORM_DATA} 
         onSubmit={handleSubmit}>
 
-      <Form className={css.form}>
+      <Form className={css.formLogin}>
         <label className={css.labelForm}>
           <span className={css.labelTextForm}>Email</span>
         <Field className={css.inputContactForm} 
