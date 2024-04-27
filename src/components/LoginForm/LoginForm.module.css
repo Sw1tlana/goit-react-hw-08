@@ -1,19 +1,17 @@
 .containerForm {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
-    padding: 0 16px;
+    padding: 30px 16px;
     gap: 10px;
-
 }
 
 .formLogin {  
-    border: 0.8px solid var(--text-dark);
-    box-shadow: 6px 3px 2px rgba(0, 0, 0, 0.16), 1px 2px 3px rgba(0, 0, 0, 0.14), 1px 3px 1px rgba(0, 0, 0, 0.3);
+    border: solid var(--light-red-background);
+    box-shadow: 8px 6px 4px rgba(250, 245, 245, 0.18), 8px 4px 6px rgba(243, 226, 226, 0.14), 10px 7px 3px rgba(232, 226, 226, 0.3);
     border-radius: 8px;
     padding: 20px;
-    width: 300px;  
+    min-width: 300px;
+    width: 100%;  
 }
 
 .imgLoginForm {
@@ -30,9 +28,11 @@
 }
 
 .labelTextForm {
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: 700;
     line-height: 1;
     letter-spacing: -0.02em;
+    color: var(--text-light);
     text-shadow: 1px 1px 2px rgba(12, 1, 1, 0.3);
 }
 
@@ -103,20 +103,26 @@
 @media screen and (min-width: 768px) {
     .containerForm {
          flex-wrap: nowrap;
-         gap: 30px;
+         gap: 40px;
     }
 
 .formLogin {
         padding: 30px;
-        width: 400px;
+        min-width: 400px;
      }
 
 .imgLoginForm {
-        width: 600px;
+        width: 500px;
     }
     
 }
 
 @media screen and (min-width: 1158px) {
-
+    .imgLoginForm {
+        width: 700px;
+    }
+     .formLogin {
+         min-width: 500px;
+    }
 }
+

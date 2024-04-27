@@ -1,0 +1,11 @@
+.containerRegistration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(rgba(133, 134, 147, 0.7), rgba(165, 169, 187, 0.7)),
+    url('https://perfectum.ua/media/zoo/images/fon2_a86f98456b01d312ad903f7c123f921c.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

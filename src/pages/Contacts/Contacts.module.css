@@ -1,17 +1,38 @@
+.containerPhone {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(133, 134, 147, 0.7), rgba(165, 169, 187, 0.7)),
+    url('https://perfectum.ua/media/zoo/images/fon2_a86f98456b01d312ad903f7c123f921c.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 .containerContacts {
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
+   padding: 30px; 
 }
 
 .phoneTitle {
     align-items: center;
-    background: linear-gradient(45deg, #aad7e8, #6e7172);
+    background: linear-gradient(45deg, #f0fafd, #babfc0);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
-    margin-top: 30px;
     font-weight: 700;
     font-size: 36px;
+}
+
+@media screen and (min-width: 768px) {
+.phoneTitle {
+    font-size: 46px;
+ }   
+}
+
+@media screen and (min-width: 1158px) {
+.phoneTitle {
+    font-size: 56px;
+}
 }

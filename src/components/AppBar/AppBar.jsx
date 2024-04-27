@@ -31,7 +31,8 @@ const AppBar = () => {
         ☰
       </button>
       {isMenuOpen && (
-        <div className={css.mobileMenu}>
+          <div className={css.mobileMenu}>
+          <button className={css.closeButton} onClick={closeMenu}>✕</button>
           <Navigation onCloseMenu={closeMenu} />
           {isLoggedIn ? <UserMenu onCloseMenu={closeMenu} /> : <AuthNav onCloseMenu={closeMenu} />}
         </div>

@@ -31,12 +31,11 @@ const ContactForm = () => {
   }
 
   return (
-    <div className={css.containerForm}>
+    <div className={css.containerFormContact}>
       <Formik 
         validationSchema={ContactFormSchema}
         initialValues={INITIAL_FORM_DATA} 
         onSubmit={handleSubmit}>
-
       <Form className={css.form}>
         <label className={css.labelForm}>
           <span className={css.labelTextForm}>Name</span>

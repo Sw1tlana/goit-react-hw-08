@@ -1,5 +1,5 @@
-import css from './Contacts.module.css';
 import '../../index.css';
+import css from './Contacts.module.css';
 
 import Loader from '../../components/Loader/Loader';
 import { useEffect } from 'react';
@@ -24,7 +24,7 @@ const Contacts = () => {
   }, [dispatch])
   
   return (
-    <div>
+    <div className={css.containerPhone}>
       <Helmet>
         <title>Contacts</title>
       </Helmet>

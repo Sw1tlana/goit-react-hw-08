@@ -13,7 +13,7 @@
 
 .heroTitle {
     font-weight: 800;
-    font-size: 38px;
+    font-size: 46px;
     text-align: center;
     background: linear-gradient(45deg,
         #f5fc1e,
@@ -36,6 +36,7 @@
 .heroTitle {
     font-size: 68px;
 }
+
 .moji {
     display: block;
     font-weight: 700;
@@ -48,8 +49,20 @@
 .heroTitle {
     font-size: 88px;
 }
+
 .moji {
     font-size: 88px;
+    animation: moveMoji 3s infinite alternate;
+}
+
+@keyframes moveMoji {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(20px);
+    }
 }
 
 }

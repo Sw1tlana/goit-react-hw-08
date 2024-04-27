@@ -37,7 +37,7 @@ export const RegistrationForm = ({ onRegister }) => {
   }
 
   return (
-      <div className={`${css.container} ${css.containerRegister}`}>
+      <div className={`${css.containerRegister} container`}>
           <img className={css.imgRegisterForm}
         src="https://cdn.nur.kz/images/1120x630/ee3d970dfb54ef99.jpeg"
         alt="images"/>

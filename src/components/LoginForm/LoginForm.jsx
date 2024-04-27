@@ -30,8 +30,9 @@ const [showPassword, setShowPassword] = useState(false);
      onLogin(formData);
     formActions.resetForm();
   }
+  
   return (
-    <div className={`${css.container} ${css.containerForm}`}>
+    <div className={`${css.containerForm} container`}>
       <img className={css.imgLoginForm}
         src="https://www.2n.com/ru_RU/documents/22902/10363696/My2N-man_plat_user-without-login_800x533.webp/f8ff8863-8e63-4fa9-8c4b-a5a34e33a54a"
         alt="documents"/>
@@ -73,7 +74,7 @@ const [showPassword, setShowPassword] = useState(false);
                   >Sign In</button>
       </Form>
       </Formik>
-    </div>
+      </div>
   )
 }
 
