@@ -81,7 +81,7 @@
 }
 
 .passwordToggleBtn {
-    background-color: var(--light-blue-background);
+    background-color: var(--blue-background-btn);
     color: var(--text-light);
     border: none;
     width: 24px;
@@ -107,7 +107,7 @@
     }
 
 .formLogin {
-        padding: 30px;
+        padding: 50px;
         min-width: 400px;
      }
 
@@ -120,9 +120,6 @@
 @media screen and (min-width: 1158px) {
     .imgLoginForm {
         width: 700px;
-    }
-     .formLogin {
-         min-width: 500px;
     }
 }
 
